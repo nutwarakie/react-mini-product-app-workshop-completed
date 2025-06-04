@@ -15,26 +15,24 @@ export default function ProductDetail() {
   }, [id]);
 
   return (
-    <>
-      <div className="detail-container">
-        <Link to="/" className="link-back">
-          back
-        </Link>
-        <img
-          src={product?.image}
-          alt="product detail img"
-          className="detail-img"
-        />
-        <div className="detail-text-container">
-          <div className="">
-            <h1 className="detail-name">{product?.name}</h1>
-            <p className="detail-desc">{product?.description}</p>
-          </div>
-
-          <p className="text-3xl">Price: {product?.price} ฿</p>
+    <div className="detail-container">
+      <Link to="/" className="link-back">
+        back
+      </Link>
+      <img
+        src={product?.image}
+        alt="product detail img"
+        className="detail-img"
+      />
+      <div className="detail-text-container">
+        <div className="">
+          <h1 className="detail-name">{product?.name}</h1>
+          <p className="detail-desc">{product?.description}</p>
         </div>
-        <ReviewSection review={product?.review ?? ""} />
+
+        <p className="text-3xl">Price: {product?.price} ฿</p>
       </div>
-    </>
+      <ReviewSection review={product?.review ?? ""} />
+    </div>
   );
 }

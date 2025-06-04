@@ -13,11 +13,17 @@ export interface IProduct {
 
 export default function ProductList() {
   const [isLoading, setIsLoading] = useState(true);
-  const [products, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetchProductList().then(setProduct).catch(console.error);
-    setIsLoading(false);
+    fetchProductList()
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch(console.error)
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
