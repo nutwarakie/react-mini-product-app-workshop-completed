@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .page-container {
+    @apply flex flex-col justify-center items-center m-5
+  }
+
+  .title {
+    @apply font-bold text-3xl
+  }
+
+  .product-container {
+    @apply grid grid-cols-3 gap-5 m-5 w-full
+  }
+
+  .product-item-container {
+    @apply flex gap-5 bg-slate-100 rounded-md p-5
+  }
+
+  .product-img {
+    @apply w-20 h-20 rounded-lg object-cover
+  }
+
+  .product-detail-container {
+    @apply flex flex-col
+  }
+
+  .product-name {
+    @apply text-lg font-semibold text-slate-700
+  }
+
+  .product-desc {
+    @apply text-slate-400
+  }
+
+  .product-price {
+    @apply text-lg
+  }
+
+  .link {
+    @apply underline self-end cursor-pointer
+  }
+
+
+  //product-detail
+  .detail-container {
+    @apply flex flex-col m-5 gap-10
+  }
+
+  .link-back {
+    @apply underline self-start
+  }
+
+  .detail-img {
+    @apply w-[300px] h-[300px] rounded-xl
+  }
+
+  .detail-text-container {
+    @apply flex flex-col gap-10
+  }
+
+  .detail-name {
+    @apply text-[36pt] font-bold
+  }
+
+  .detail-desc {
+    @apply text-2xl text-slate-400 break-words
+  }
+
+  .detail-price {
+    @apply text-3xl
+  }
+
+  //Review-Section
+  .review-container {
+    @apply flex flex-col p-4 w-[550px] border gap-2 border-slate-300 rounded-md
+  }
+
+  .review-text {
+    @apply bg-slate-100 rounded-md p-4
+  }
+}
